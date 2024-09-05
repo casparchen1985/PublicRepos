@@ -11,7 +11,7 @@ A. mDeviceModel, deviceID =>
 1. onCreate()  
    (a) OTAFilter
    ```
-   if (mDeviceModel.contains("35")&&mDeviceVersion.contains("10")){
+   if (mDeviceModel.contains("35") && mDeviceVersion.contains("10")){
      OTAFilter.addAction(Intent.ACTION_TIME_TICK);
    }
    ```
