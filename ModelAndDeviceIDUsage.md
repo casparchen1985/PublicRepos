@@ -11,14 +11,14 @@ A. mDeviceModel, deviceID =>
 1. onCreate()  
    (a) OTAFilter
    ```
-   if(mDeviceModel.contains("35")&&mDeviceVersion.contains("10")){
+   if (mDeviceModel.contains("35")&&mDeviceVersion.contains("10")){
      OTAFilter.addAction(Intent.ACTION_TIME_TICK);
    }
    ```
 
    (b) PowerManager
    ```
-   if (mDeviceModel.contains("95")&&deviceID.substring(12,13).equals("1")) {
+   if (mDeviceModel.contains("95") && deviceID.substring(12,13).equals("1")) {
      if (!heaterfile.isFile()) {
        readJson.init();
      } else {
@@ -35,7 +35,7 @@ A. mDeviceModel, deviceID =>
   
       (a) Thread.sleep(3000);
 
-      (b) if(intent.getAction().equals(ENTERPRISE_EXPORT))  
+      (b) if (intent.getAction().equals(ENTERPRISE_EXPORT))  
 
      ```
        if (mDeviceModel.contains("95") && deviceID.substring(12,13).equals("1"))
@@ -45,16 +45,16 @@ A. mDeviceModel, deviceID =>
      (c) if (intent.getAction().equals(ENTERPRISE_IMPORT))
      
      ```
-       if(mDeviceModel.contains("95")&&deviceID.substring(12,13).equals("1")){
+       if (mDeviceModel.contains("95") && deviceID.substring(12,13).equals("1")){
          readJson.readHeaterJson();
          initHeater();
        }
      ```
    
-    (d) if(intent.getAction().equals(Intent.ACTION_TIME_TICK))  
+    (d) if (intent.getAction().equals(Intent.ACTION_TIME_TICK))  
     
     ```
-      if(mDeviceModel.contains("35") && mDeviceVersion.contains("10"))
+      if (mDeviceModel.contains("35") && mDeviceVersion.contains("10"))
         SetNFCPowerStatus(false);
    ```
 
@@ -114,12 +114,12 @@ A. mDeviceModel =>
 mDeviceModel, deviceID =>  
    1. onCreate()  
 ```
-if(mDeviceModel.contains("51") && mDeviceVersion.contains("8"))
+if (mDeviceModel.contains("51") && mDeviceVersion.contains("8"))
    RS50_battery();
-else if(mDeviceModel.contains("51") && mDeviceVersion.equals("11")) {
+else if (mDeviceModel.contains("51") && mDeviceVersion.equals("11")) {
    readJson();
    RS51R_battery();
-} else if(mDeviceModel.contains("95")&&deviceID.substring(12,13).equals("1"))
+} else if (mDeviceModel.contains("95") && deviceID.substring(12,13).equals("1"))
    RK95CC_battery();
 ```
 
@@ -129,9 +129,9 @@ else if(mDeviceModel.contains("51") && mDeviceVersion.equals("11")) {
 (b) intent.getAction().equals("enterprise.mode.action.BATTERY_NOTIFICATION")  
 
 ```
-if(mDeviceModel.contains("51") && mDeviceVersion.contains("8"))
+if (mDeviceModel.contains("51") && mDeviceVersion.contains("8"))
    RS50_battery();
-else if(mDeviceModel.contains("51") && mDeviceVersion.equals("11"))
+else if (mDeviceModel.contains("51") && mDeviceVersion.equals("11"))
    RS51R_battery();
 ```
 
@@ -142,7 +142,7 @@ null
 A. mDeviceModel =>  
   1. onCreate()
   ```
-  if(mDeviceModel.contains("51")||mDeviceModel.contains("35")){
+  if (mDeviceModel.contains("51") || mDeviceModel.contains("35")){
     dir.mkdir();
     per_file( dir );
   }
@@ -157,6 +157,6 @@ B. device_ID =>
   1. SDCReceiver<BroadcastReceiver>  
     (a) onReceive()
       ```  
-      if(intent.getAction().equals( Intent.ACTION_BOOT_COMPLETED))
+      if (intent.getAction().equals( Intent.ACTION_BOOT_COMPLETED))
       Thread.sleep(1000);
       ```
