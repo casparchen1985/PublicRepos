@@ -161,7 +161,9 @@ A. mDeviceModel =>
 B. device_ID =>  
   1. SDCReceiver<BroadcastReceiver>  
     (a) onReceive()
+
       ```  
-      if (intent.getAction().equals( Intent.ACTION_BOOT_COMPLETED))
-      Thread.sleep(1000);
+      if (intent.getAction().equals( Intent.ACTION_BOOT_COMPLETED)) {
+         Thread.sleep(1000);
+      }
       ```
