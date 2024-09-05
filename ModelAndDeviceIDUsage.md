@@ -36,7 +36,7 @@ A. mDeviceModel, deviceID =>
       (a) Thread.sleep(3000);
 
       (b) if (intent.getAction().equals(ENTERPRISE_EXPORT))  
-
+     
      ```
        if (mDeviceModel.contains("95") && deviceID.substring(12,13).equals("1"))
          readJson.init();
@@ -50,13 +50,13 @@ A. mDeviceModel, deviceID =>
          initHeater();
        }
      ```
-   
+     
     (d) if (intent.getAction().equals(Intent.ACTION_TIME_TICK))  
-    
-    ```
+       
+     ```
       if (mDeviceModel.contains("35") && mDeviceVersion.contains("10"))
         SetNFCPowerStatus(false);
-   ```
+     ```
 
     
 # Enterprise Settings
