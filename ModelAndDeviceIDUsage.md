@@ -42,7 +42,7 @@ A. mDeviceModel, deviceID =>
          readJson.init();
      ```
      
-     (c) if (intent.getAction().equals(ENTERPRISE_IMPORT))
+     (c) if (intent.getAction().equals(ENTERPRISE_IMPORT))  
      
      ```
        if (mDeviceModel.contains("95") && deviceID.substring(12,13).equals("1")){
