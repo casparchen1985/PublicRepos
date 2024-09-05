@@ -7,7 +7,7 @@ deviceID = SystemProperties.get("sys.device.id");
 null
 
 # Enterprise - Service
-A. mDeviceModel, deviceID =>
+mDeviceModel, deviceID =>  
 1. onCreate()  
    (a) OTAFilter
    ```
@@ -70,8 +70,8 @@ A. mDeviceModel.contains("38") =>
     (b) UHF Module  
     (c) Reboot to Safe Mode  
     (d) App Rotation Entry 
-  4. dim_prefs.unregisterOnSharedPreferenceChangeListener()
-
+  4. dim_prefs.unregisterOnSharedPreferenceChangeListener()  
+  
 B. deviceID => 
   1. Select Preference Layout
   ```
@@ -105,7 +105,7 @@ B. deviceID =>
   ```
 
 # LogGen
-A. mDeviceModel =>  
+mDeviceModel =>  
   1. deviceInfo()  
     eviceInfo.setSummary(".......");
 
