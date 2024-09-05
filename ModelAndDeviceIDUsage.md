@@ -108,7 +108,6 @@ A. mDeviceModel =>
 # BatteryNotification
 A. mDeviceModel, deviceID =>  
   1. onCreate()  
-    ```
     if(mDeviceModel.contains("51") && mDeviceVersion.contains("8"))
       RS50_battery();
     else if(mDeviceModel.contains("51") && mDeviceVersion.equals("11")) {
@@ -116,19 +115,16 @@ A. mDeviceModel, deviceID =>
       RS51R_battery();
     } else if(mDeviceModel.contains("95")&&deviceID.substring(12,13).equals("1"))
       RK95CC_battery();
-    ```
 
   2. MediaPlayerNotificationShow <BroadcastReceiver>  
     (a) intent.getAction().equals(Intent.ACTION_SCREEN_ON)  
       Same as onCreate()  
   
     (b) intent.getAction().equals("enterprise.mode.action.BATTERY_NOTIFICATION")  
-    ```
-    if(mDeviceModel.contains("51") && mDeviceVersion.contains("8"))
-      RS50_battery();
-    else if(mDeviceModel.contains("51") && mDeviceVersion.equals("11"))
-      RS51R_battery();
-    ```
+       if(mDeviceModel.contains("51") && mDeviceVersion.contains("8"))
+         RS50_battery();
+       else if(mDeviceModel.contains("51") && mDeviceVersion.equals("11"))
+         RS51R_battery();
 
 # SDC Activation Tool - FileTool
 null
