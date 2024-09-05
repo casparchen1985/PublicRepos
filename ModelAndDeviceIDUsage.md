@@ -38,24 +38,27 @@ A. mDeviceModel, deviceID =>
       (b) if (intent.getAction().equals(ENTERPRISE_EXPORT))  
      
      ```
-       if (mDeviceModel.contains("95") && deviceID.substring(12,13).equals("1"))
-         readJson.init();
+       if (mDeviceModel.contains("95") && deviceID.substring(12,13).equals("1")) {
+          readJson.init();
+        }
      ```
      
      (c) if (intent.getAction().equals(ENTERPRISE_IMPORT))  
      
      ```
-       if (mDeviceModel.contains("95") && deviceID.substring(12,13).equals("1")){
+       if (mDeviceModel.contains("95") && deviceID.substring(12,13).equals("1")) {
          readJson.readHeaterJson();
          initHeater();
        }
      ```
-    (d) if (intent.getAction().equals(Intent.ACTION_TIME_TICK))  
 
-   ```
-      if (mDeviceModel.contains("35") && mDeviceVersion.contains("10"))
-         SetNFCPowerStatus(false);
-   ```
+     (d) if (intent.getAction().equals(Intent.ACTION_TIME_TICK))  
+
+     ```
+        if (mDeviceModel.contains("35") && mDeviceVersion.contains("10")) {
+           SetNFCPowerStatus(false);
+        }
+     ```
 
   
 # Enterprise Settings
@@ -111,28 +114,31 @@ A. mDeviceModel =>
 
 # BatteryNotification
 mDeviceModel, deviceID =>  
-   1. onCreate()  
-```
-if (mDeviceModel.contains("51") && mDeviceVersion.contains("8"))
-   RS50_battery();
-else if (mDeviceModel.contains("51") && mDeviceVersion.equals("11")) {
-   readJson();
-   RS51R_battery();
-} else if (mDeviceModel.contains("95") && deviceID.substring(12,13).equals("1"))
-   RK95CC_battery();
-```
+   1. onCreate()
 
-  2. MediaPlayerNotificationShow\BroadcastReceiver>  
-(a) intent.getAction().equals(Intent.ACTION_SCREEN_ON)  
-&emsp;Same as onCreate()  
-(b) intent.getAction().equals("enterprise.mode.action.BATTERY_NOTIFICATION")  
+      ```
+      if (mDeviceModel.contains("51") && mDeviceVersion.contains("8")) {
+         RS50_battery();
+      } else if (mDeviceModel.contains("51") && mDeviceVersion.equals("11")) {
+         readJson();
+         RS51R_battery();
+      } else if (mDeviceModel.contains("95") && deviceID.substring(12,13).equals("1")) {
+         RK95CC_battery();
+      }
+      ```
+   2. MediaPlayerNotificationShow\BroadcastReceiver>  
+      (a) intent.getAction().equals(Intent.ACTION_SCREEN_ON)  
+         Same as onCreate()
+      
+      (b) intent.getAction().equals("enterprise.mode.action.BATTERY_NOTIFICATION")  
 
-```
-if (mDeviceModel.contains("51") && mDeviceVersion.contains("8"))
-   RS50_battery();
-else if (mDeviceModel.contains("51") && mDeviceVersion.equals("11"))
-   RS51R_battery();
-```
+      ```
+      if (mDeviceModel.contains("51") && mDeviceVersion.contains("8")) {
+         RS50_battery();
+      } else if (mDeviceModel.contains("51") && mDeviceVersion.equals("11")) {
+         RS51R_battery();
+      }
+      ```
 
 # SDC Activation Tool - FileTool
 null
