@@ -110,7 +110,7 @@ mDeviceModel =>
     eviceInfo.setSummary(".......");
 
   2. onPreferenceClick()  
-     zip_path = "/" + filename + "_" + mDeviceModel + "_" + serial_number + "_" + filetime + ".zip";
+     `zip_path = "/" + filename + "_" + mDeviceModel + "_" + serial_number + "_" + filetime + ".zip";`
 
 # BatteryNotification
 mDeviceModel, deviceID =>  
