@@ -35,25 +35,30 @@ A. mDeviceModel, deviceID =>
   
       (a) Thread.sleep(3000);
 
-      (b)
+      (b) if(intent.getAction().equals(ENTERPRISE_EXPORT))  
+
      ```
-     if(intent.getAction().equals(ENTERPRISE_EXPORT)) {
        if (mDeviceModel.contains("95") && deviceID.substring(12,13).equals("1"))
          readJson.init();
-     }
+     ```
      
-     if (intent.getAction().equals(ENTERPRISE_IMPORT)) {
+     (c) if (intent.getAction().equals(ENTERPRISE_IMPORT))
+     
+     ```
        if(mDeviceModel.contains("95")&&deviceID.substring(12,13).equals("1")){
          readJson.readHeaterJson();
          initHeater();
-       }}
+       }
+     ```
    
-    if(intent.getAction().equals(Intent.ACTION_TIME_TICK)) {
+    (d) if(intent.getAction().equals(Intent.ACTION_TIME_TICK))  
+    
+    ```
       if(mDeviceModel.contains("35") && mDeviceVersion.contains("10"))
         SetNFCPowerStatus(false);
-    }
- 
+   ```
 
+    
 # Enterprise Settings
 A. mDeviceModel.contains("38") =>  
   1. Select Preference Layout
@@ -106,25 +111,29 @@ A. mDeviceModel =>
      zip_path = "/" + filename + "_" + mDeviceModel + "_" + serial_number + "_" + filetime + ".zip";
 
 # BatteryNotification
-A. mDeviceModel, deviceID =>  
-  1. onCreate()  
-    if(mDeviceModel.contains("51") && mDeviceVersion.contains("8"))
-      RS50_battery();
-    else if(mDeviceModel.contains("51") && mDeviceVersion.equals("11")) {
-      readJson();
-      RS51R_battery();
-    } else if(mDeviceModel.contains("95")&&deviceID.substring(12,13).equals("1"))
-      RK95CC_battery();
+mDeviceModel, deviceID =>  
+   1. onCreate()  
+```
+if(mDeviceModel.contains("51") && mDeviceVersion.contains("8"))
+   RS50_battery();
+else if(mDeviceModel.contains("51") && mDeviceVersion.equals("11")) {
+   readJson();
+   RS51R_battery();
+} else if(mDeviceModel.contains("95")&&deviceID.substring(12,13).equals("1"))
+   RK95CC_battery();
+```
 
-  2. MediaPlayerNotificationShow <BroadcastReceiver>  
-    (a) intent.getAction().equals(Intent.ACTION_SCREEN_ON)  
-      Same as onCreate()  
-  
-    (b) intent.getAction().equals("enterprise.mode.action.BATTERY_NOTIFICATION")  
-       if(mDeviceModel.contains("51") && mDeviceVersion.contains("8"))
-         RS50_battery();
-       else if(mDeviceModel.contains("51") && mDeviceVersion.equals("11"))
-         RS51R_battery();
+  2. MediaPlayerNotificationShow\BroadcastReceiver>  
+(a) intent.getAction().equals(Intent.ACTION_SCREEN_ON)  
+&emsp;Same as onCreate()  
+(b) intent.getAction().equals("enterprise.mode.action.BATTERY_NOTIFICATION")  
+
+```
+if(mDeviceModel.contains("51") && mDeviceVersion.contains("8"))
+   RS50_battery();
+else if(mDeviceModel.contains("51") && mDeviceVersion.equals("11"))
+   RS51R_battery();
+```
 
 # SDC Activation Tool - FileTool
 null
@@ -142,7 +151,7 @@ A. mDeviceModel =>
   2. check_deviceID()  
     Thread.sleep( 1000 );  
   4. check_lic()  
-    opy( RS51_adcpath + "/z97shdftf56eg8.asdc", Environment.getExternalStorageDirectory().getPath() + "/z97shdftf56eg8.asdc" );
+    `opy( RS51_adcpath + "/z97shdftf56eg8.asdc", Environment.getExternalStorageDirectory().getPath() + "/z97shdftf56eg8.asdc" );`
 
 B. device_ID =>  
   1. SDCReceiver<BroadcastReceiver>  
