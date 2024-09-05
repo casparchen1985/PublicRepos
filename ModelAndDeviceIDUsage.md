@@ -50,15 +50,14 @@ A. mDeviceModel, deviceID =>
          initHeater();
        }
      ```
-     
     (d) if (intent.getAction().equals(Intent.ACTION_TIME_TICK))  
-       
-     ```
-      if (mDeviceModel.contains("35") && mDeviceVersion.contains("10"))
-        SetNFCPowerStatus(false);
-     ```
 
-    
+   ```
+      if (mDeviceModel.contains("35") && mDeviceVersion.contains("10"))
+         SetNFCPowerStatus(false);
+   ```
+
+  
 # Enterprise Settings
 A. mDeviceModel.contains("38") =>  
   1. Select Preference Layout
