@@ -1,17 +1,16 @@
 # (Done) Paper Work
 | No. | 任務名稱                         | 工期 (Days) | 開始時間   | 完成時間   | 實際完成時間 |
 | --- | -------------------------------- | ----------- | ---------- | ---------- | ------------ |
-| 1   | 檢查各專案中 DeviceModel 跟 DeviceID 的使用目的   | 0.5         | 2024/09/05 | 2024/09/05 | 2024/09/05   |
-| 2   | RK26 Keyboard Sound 失效 | -           | - | - | -   |
+| 1   | 檢查各專案中判斷 DeviceModel 跟 DeviceID 的用途   | 0.5         | 2024/09/05 | 2024/09/05 | 2024/09/05   |
+| 2   | 日本 Pre-Sales - RK26 Keyboard Sound 失效確認 | -           | - | - | -   |
 
 - Links:</br>
 [ModelName & DeviceID](https://github.com/casparchen1985/PublicRepos/blob/main/ModelAndDeviceIDUsage.md) &emsp; 
 [P_RK26_I-59](https://jira.cipherlab.com.tw/browse/P_RK26_I-59)
 
 - 目前的處理狀況:</br>
-1. 因應 RS38H 預計是透過 Model Name 來跟 RS38 做區隔, 所以先掃過相關的程式碼, 了解一下大概都是在做些什麽.
-2. 因從 Pre-Sales 端反應日本客戶告知 RK26 Keyboard Sound 沒有做用. 隨後發信跟 SIT 詢問, 有得到對應的 JiRA ticket</br>
-接下來會往 KeyMappingManager 排查問題
+&emsp;1. 因應 RS38H 預計是透過 Model Name 來跟 RS38 做區隔, 所以先掃過相關的程式碼, 了解一下大概都是在做些什麽.  
+&emsp;2. 已發信向 SIT 詢問此問題的 JiRA ticket, 目前判斷可切入點是 KeyMappingManager, 實際處理的時程還會再討論過.
 
 
 # (Done) Building Up @ GROWI
@@ -19,15 +18,17 @@
 | --- | -------------------------------- | ----------- | ---------- | ---------- | ------------ |
 | 1   | Create EnterpriseSettings page   | 0.5         | 2024/09/03 | 2024/09/03 | 2024/09/03   |
 | 2   | Combine all documents into GROWI | 1           | 2024/09/04 | 2024/09/04 | 2024/09/04   |
-| 3   | Share QFil Stroage Type and Add Sticky Note for Enterprise Settings     | 0.5         | 2024/09/05 | 2024/09/05 | 2024/09/05   |
+| 3   | Share QFil Stroage Type,</br>Add Sticky Note for Enterprise Settings     | 0.5         | 2024/09/05 | 2024/09/05 | 2024/09/05   |
 
 - Links:</br>
 [Enterprise Setting](http://192.168.8.100:12000/66d6d868e29b20ef8a071363) &emsp;
-[Release Note](http://192.168.8.100:12000/66d7d7c6e29b20ef8a07a7b6)
+[Release Note](http://192.168.8.100:12000/66d7d7c6e29b20ef8a07a7b6) &emsp;
+[QFil Stroage Types](http://192.168.8.100:12000/66d5857ee29b20ef8a061178) &emsp;
+[Sticky Note](http://192.168.8.100:12000/66d8fb16e29b20ef8a08a5cb)
 
 - 目前的處理狀況:</br>
-將原有的檔案 `機種與功能對照檔(.xlsx)`, `各功能測試及Property key紀錄檔(.docx)`, `版本記錄檔(.txt)` 內容整合進 GROWI</br>
-並將相關檔案連結一併整理
+&emsp;1. 將原有的檔案 `機種與功能對照檔(.xlsx)`, `各功能測試及Property key紀錄檔(.docx)`, `版本記錄檔(.txt)` 內容整合進 GROWI  
+&emsp;2. 將工作相關檔案/連結/筆記資訊一併整理
 
 
 # (Processing) App Rotation Issue
@@ -42,9 +43,7 @@
 [S_WMDS-625](https://jira.cipherlab.com.tw/browse/S_WMDS-625)
 
 - 目前的處理狀況:</br>
-待 Code Review 完成</br>
-待 Weekly Meeting 討論, 若確定要啟用 GROWI,  將停止更新原本使用的各文件檔案, 並以 GROWI 為公告媒介提供給其他單位瀏覽
-
+&emsp;待 Code Review 完成
 </br>
 </br>
 </br>
