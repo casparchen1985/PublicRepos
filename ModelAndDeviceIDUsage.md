@@ -1,4 +1,4 @@
-###### Updae Date: 2024/09/05
+###### Update Date: 2024/09/05
 
 mDeviceModel = SystemProperties.get("ro.product.model");  
 mDeviceVersion = SystemProperties.get("ro.build.version.release");  
