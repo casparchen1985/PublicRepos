@@ -6,6 +6,8 @@ deviceID = SystemProperties.get("sys.device.id");
 
 # Enterprise - ColdChain
 null
+</br>
+</br>
 
 # Enterprise - Service
 mDeviceModel, deviceID =>  
@@ -60,8 +62,9 @@ mDeviceModel, deviceID =>
            SetNFCPowerStatus(false);
         }
      ```
+</br>
+</br>
 
-  
 # Enterprise Settings
 A. mDeviceModel.contains("38") =>  
   1. Select Preference Layout
@@ -104,6 +107,8 @@ B. deviceID =>
       mVersionPreference.setSummary("Enterprise Settings : " + versionName + "\n" + "Enterprise Services : " + versionName_service + "\n");
     }}
   ```
+</br>
+</br>
 
 # LogGen
 mDeviceModel =>  
@@ -140,9 +145,13 @@ mDeviceModel, deviceID =>
          RS51R_battery();
       }
       ```
+</br>
+</br>
 
 # SDC Activation Tool - FileTool
 null
+</br>
+</br>
 
 # SDC Activation Tool - FAC / USER
 A. mDeviceModel =>  
