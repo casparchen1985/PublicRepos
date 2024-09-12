@@ -1,49 +1,70 @@
-# (Done) Paper Work
-| No. | 任務名稱                         | 工期 (Days) | 開始時間   | 完成時間   | 實際完成時間 |
-| --- | -------------------------------- | ----------- | ---------- | ---------- | ------------ |
-| 1   | 檢查各專案中判斷 DeviceModel 跟 DeviceID 的用途   | 0.5         | 2024/09/05 | 2024/09/05 | 2024/09/05   |
-| 2   | 日本 Pre-Sales - RK26 Keyboard Sound 失效確認 | -           | - | - | -   |
-
-- Links:</br>
-[ModelName & DeviceID](https://github.com/casparchen1985/PublicRepos/blob/main/ModelAndDeviceIDUsage.md) &emsp; 
-[P_RK26_I-59](https://jira.cipherlab.com.tw/browse/P_RK26_I-59)
-
-- 目前的處理狀況:</br>
-&emsp;1. 因應 RS38H 預計是透過 Model Name 來跟 RS38 做區隔, 所以先掃過相關的程式碼, 了解一下大概都是在做些什麽.</br>
-&emsp;2. 已發信向 SIT 詢問此問題的 JiRA ticket, 目前判斷可切入點是 KeyMappingManager, 實際處理的時程還會再討論過.
-
-
-# (Done) Building Up @ GROWI
-| No. | 任務名稱                         | 工期 (Days) | 開始時間   | 完成時間   | 實際完成時間 |
-| --- | -------------------------------- | ----------- | ---------- | ---------- | ------------ |
-| 1   | Create EnterpriseSettings page   | 0.5         | 2024/09/03 | 2024/09/03 | 2024/09/03   |
-| 2   | Combine all documents into GROWI | 1           | 2024/09/04 | 2024/09/04 | 2024/09/04   |
-| 3   | Share QFil Stroage Type,</br>Add Sticky Note for Enterprise Settings     | 0.5         | 2024/09/05 | 2024/09/05 | 2024/09/05   |
-
-- Links:</br>
-[Enterprise Setting](http://192.168.8.100:12000/66d6d868e29b20ef8a071363) &emsp;
-[Release Note](http://192.168.8.100:12000/66d7d7c6e29b20ef8a07a7b6) &emsp;
-[QFil Stroage Types](http://192.168.8.100:12000/66d5857ee29b20ef8a061178) &emsp;
-[Sticky Note](http://192.168.8.100:12000/66d8fb16e29b20ef8a08a5cb)
-
-- 目前的處理狀況:</br>
-&emsp;1. 將原有的檔案 `機種與功能對照檔(.xlsx)`, `各功能測試及Property key紀錄檔(.docx)`, `版本記錄檔(.txt)` 內容整合進 GROWI</br>
-&emsp;2. 將工作相關檔案/連結/筆記資訊一併整理
-
-
 # (Processing) App Rotation Issue
 | No. | 任務名稱                   | 工期 (Days) | 開始時間   | 完成時間   | 實際完成時間 |
 | --- | -------------------------- | ----------- | ---------- | ---------- | ------------ |
 | 1   | Meeting, Study and Prepare | 1           | 2024/08/27 | 2024/08/28 | 2024/08/28   |
 | 2   | Fix issue                  | 3           | 2024/08/28 | 2024/08/30 | 2024/09/02   |
-| 3   | Paper Work                 | 0.5         | 2024/09/02 | 2024/09/02 | -            |
+| 3   | Paper Work                 | 0.5         | 2024/09/02 | 2024/09/02 | 2024/09/11   |
+| 4   | Fix bug                    | 1           | 2024/09/13 | 2024/09/16 | -            |
 
 - Links:</br>
 [S_WMDS-622](https://jira.cipherlab.com.tw/browse/S_WMDS-622) &emsp;
 [S_WMDS-625](https://jira.cipherlab.com.tw/browse/S_WMDS-625)
 
 - 目前的處理狀況:</br>
-&emsp;待 Code Review 完畢
+&emsp;09/12 SIT 進測時有發現 get system property 時沒有保護好造成 crash, 今天會試著複製相同的現象並實驗解法.
+
+
+
+# (Processing) "Disable Special KeyEvent" doesn't work @ JP
+| No. | 任務名稱                         | 工期 (Days) | 開始時間   | 完成時間   | 實際完成時間 |
+| --- | ------------------------------- | ----------- | ---------- | ---------- | ------------ |
+| 1   | Study, Trace Code               | 1           | 2024/09/12 | 2024/09/12 | 2024/09/12   |
+| 2   | Disscusion / Define behavior    | -           | -          | -          | -            |
+| 3   | Fix issue                       | -           | -          | -          | -            |
+| 4   | Paper Work                      | -           | -          | -          | -            |
+| 5   | Build OS Image                  | -           | -          | -          | -            |
+
+- 目前的處理狀況:</br>
+&emsp;看完 Source code 跟 JC 討論之後仍須向其他單位確認更多細節. e.g., (1)功能開發時的行為定義 (2) Supprot 窗口與日本客戶的功能認知  
+&emsp;有確切的功能與行為定義之後, 才有辦法規劃與實作相對應的解法, 甚至是同步各單位的認知並且完成相對應的改善
+
+
+
+# (Processing) RK26 Keyboard Sound 失效
+| No. | 任務名稱                         | 工期 (Days) | 開始時間   | 完成時間   | 實際完成時間 |
+| --- | ------------------------------- | ----------- | ---------- | ---------- | ------------ |
+| 1   | Study, Trace Code               | 1.5         | 2024/09/05 | 2024/09/06 | 2024/09/06   |
+| 2   | Eclipse 環境設定與除錯            | 1           | 2024/09/09 | 2024/09/10 | 2024/09/10   |
+| 3   | Fix issue                       | 1           | 2024/09/10 | 2024/09/10 | 2024/09/11   |
+| 4   | Paper Work                      | 0.5         | 2024/09/11 | 2024/09/11 | 2024/09/11   |
+| 5   | Build OS Image                  | 1           | 2024/09/11 | 2024/09/12 | 2024/09/12   |
+
+- Links:</br>
+[ModelName & DeviceID](https://github.com/casparchen1985/PublicRepos/blob/main/ModelAndDeviceIDUsage.md) &emsp; 
+[P_RK26_I-59](https://jira.cipherlab.com.tw/browse/P_RK26_I-59)
+
+- 目前的處理狀況:  
+OS Image (dailybuild) 昨天已請 JC 完成各機種各OS的進版, 今早已發信通知 SIT 可以進測
+
+
+
+# (Processing) Building Up @ GROWI
+| No. | 任務名稱                                                     | 工期 (Days) | 開始時間   | 完成時間   | 實際完成時間 |
+| --- | ----------------------------------------------------------- | ----------- | ---------- | ---------- | ------------ |
+| 1   | 補充 RK25, RS38 刷 OS Image 的注意事項                          | 0.5         | 2024/09/06 | 2024/09/06 | 2024/09/06   |
+| 2   | 轉移 Android Studio 各專案中判斷 DeviceModel 跟 DeviceID 的筆記 | -           | -          | -          | -            |
+| 3   | 補充 IDE Eclipse 環境設定的注意事項                            | 1.5         | 2024/09/09 | 2024/09/10 | 2024/09/10   |
+| 4   | 新增 Release Note - Key Mapping Manager (RK25)              | 0.5         | 2024/09/11 | 2024/09/12 | 2024/09/12   |
+| 5   | 備份 Release Note - Key Mapping Manager (RS35 / RK95)       | -           | -          | -          | -            |
+
+- Links:</br>
+[DeviceModel & DeviceID 筆記](http://192.168.8.100:12000/66dfac95e29b20ef8a0ab3f9) &emsp;
+[IDE Eclipse 筆記](http://192.168.8.100:12000/66dfaa51e29b20ef8a0aad5) &emsp;
+[Release Note - RK25](http://192.168.8.100:12000/66e11320e29b20ef8a0af91f)
+
+- 目前的處理狀況: &emsp; 工作中隨時遇到需要筆記下來的資訊, 就會找時間寫到 GROWI 上
+
+
 </br>
 </br>
 </br>
@@ -51,21 +72,12 @@
 
 
 # (Pending) RK25 enroll failed @ Thailand
-| No. | 任務名稱                    | 工期 (Days) | 開始時間   | 完成時間   | 實際完成時間 |
-| --- | --------------------------- | ----------- | ---------- | ---------- | ------------ |
-| 1   | Environment study / Prepare | -           | -          | -          | -            |
-| 2   | Reproduce                   | 0.5         | 2024/08/15 | 2024/08/15 | 2024/08/15   |
-| 3   | Study hostLog               | 2           | 2024/08/19 | 2024/08/20 | 2024/08/20   |
-
 - 目前的處理狀況: &emsp; 目前沒有迫切需求, 降低優先權, 先處理其他任務.
 
 
 # (Pending) Tools upgrade on EnterpriseSettings
 | No. | 任務                                 | 工期 (Days) | 開始時間   | 完成時間   | 實際完成時間 |
 | --- | ------------------------------------ | ----------- | ---------- | ---------- | ------------ |
-| 1   | Gradle & Android Gradle Plugin       | 1.5         | 2024/08/05 | 2024/08/06 | 2024/08/06   |
-| 2   | Apply Kotlin                         | 0.5         | 2024/08/06 | 2024/08/06 | 2024/08/06   |
-| 3   | Verify functions                     | 4           | 2024/08/07 | 2024/08/09 | 2024/08/14   |
-| 4   | Verify after code merged (Mercurial) | 1           | 2024/08/12 | -          | -            |
+| 1   | Verify after code merged (Mercurial) | 1           | 2024/08/12 | -          | -            |
 
 - 目前的處理狀況: &emsp; 等待最後通知
