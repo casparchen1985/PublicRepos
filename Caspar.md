@@ -71,7 +71,8 @@ OS Image (dailybuild) 昨天已請 JC 完成各機種各OS的進版, 今早已�
 
 # (Pending) RK25 enroll failed @ Thailand
 - 目前的處理狀況: &emsp; 目前沒有迫切需求, 降低優先權, 先處理其他任務.
-
+</br>
+</br>
 
 # (Pending) Tools upgrade on EnterpriseSettings
 | No. | 任務                                 | 工期 (Days) | 開始時間   | 完成時間   | 實際完成時間 |
