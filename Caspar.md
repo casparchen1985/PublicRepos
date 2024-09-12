@@ -12,8 +12,8 @@
 
 - 目前的處理狀況:</br>
 &emsp;09/12 SIT 進測時有發現 get system property 時沒有保護好造成 crash, 今天會試著複製相同的現象並實驗解法.
-
-
+</br>
+</br>
 
 # (Processing) "Disable Special KeyEvent" doesn't work @ JP
 | No. | 任務名稱                         | 工期 (Days) | 開始時間   | 完成時間   | 實際完成時間 |
@@ -27,8 +27,8 @@
 - 目前的處理狀況:</br>
 &emsp;看完 Source code 跟 JC 討論之後仍須向其他單位確認更多細節. e.g., (1)功能開發時的行為定義 (2) Supprot 窗口與日本客戶的功能認知  
 &emsp;有確切的功能與行為定義之後, 才有辦法規劃與實作相對應的解法, 甚至是同步各單位的認知並且完成相對應的改善
-
-
+</br>
+</br>
 
 # (Processing) RK26 Keyboard Sound 失效
 | No. | 任務名稱                         | 工期 (Days) | 開始時間   | 完成時間   | 實際完成時間 |
@@ -45,8 +45,8 @@
 
 - 目前的處理狀況:  
 OS Image (dailybuild) 昨天已請 JC 完成各機種各OS的進版, 今早已發信通知 SIT 可以進測
-
-
+</br>
+</br>
 
 # (Processing) Building Up @ GROWI
 | No. | 任務名稱                                                     | 工期 (Days) | 開始時間   | 完成時間   | 實際完成時間 |
@@ -63,8 +63,6 @@ OS Image (dailybuild) 昨天已請 JC 完成各機種各OS的進版, 今早已�
 [Release Note - RK25](http://192.168.8.100:12000/66e11320e29b20ef8a0af91f)
 
 - 目前的處理狀況: &emsp; 工作中隨時遇到需要筆記下來的資訊, 就會找時間寫到 GROWI 上
-
-
 </br>
 </br>
 </br>
