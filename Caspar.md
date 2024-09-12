@@ -9,7 +9,7 @@
 [P_RK26_I-59](https://jira.cipherlab.com.tw/browse/P_RK26_I-59)
 
 - 目前的處理狀況:</br>
-&emsp;1. 因應 RS38H 預計是透過 Model Name 來跟 RS38 做區隔, 所以先掃過相關的程式碼, 了解一下大概都是在做些什麽.  
+&emsp;1. 因應 RS38H 預計是透過 Model Name 來跟 RS38 做區隔, 所以先掃過相關的程式碼, 了解一下大概都是在做些什麽.</br>
 &emsp;2. 已發信向 SIT 詢問此問題的 JiRA ticket, 目前判斷可切入點是 KeyMappingManager, 實際處理的時程還會再討論過.
 
 
@@ -27,7 +27,7 @@
 [Sticky Note](http://192.168.8.100:12000/66d8fb16e29b20ef8a08a5cb)
 
 - 目前的處理狀況:</br>
-&emsp;1. 將原有的檔案 `機種與功能對照檔(.xlsx)`, `各功能測試及Property key紀錄檔(.docx)`, `版本記錄檔(.txt)` 內容整合進 GROWI  
+&emsp;1. 將原有的檔案 `機種與功能對照檔(.xlsx)`, `各功能測試及Property key紀錄檔(.docx)`, `版本記錄檔(.txt)` 內容整合進 GROWI</br>
 &emsp;2. 將工作相關檔案/連結/筆記資訊一併整理
 
 
@@ -43,7 +43,7 @@
 [S_WMDS-625](https://jira.cipherlab.com.tw/browse/S_WMDS-625)
 
 - 目前的處理狀況:</br>
-&emsp;待 Code Review 完成
+&emsp;待 Code Review 完畢
 </br>
 </br>
 </br>
