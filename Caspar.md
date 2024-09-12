@@ -39,10 +39,6 @@
 | 4   | Paper Work                      | 0.5         | 2024/09/11 | 2024/09/11 | 2024/09/11   |
 | 5   | Build OS Image                  | 1           | 2024/09/11 | 2024/09/12 | 2024/09/12   |
 
-- Links:</br>
-[ModelName & DeviceID](https://github.com/casparchen1985/PublicRepos/blob/main/ModelAndDeviceIDUsage.md) &emsp; 
-[P_RK26_I-59](https://jira.cipherlab.com.tw/browse/P_RK26_I-59)
-
 - 目前的處理狀況:  
 OS Image (dailybuild) 昨天已請 JC 完成各機種各OS的進版, 今早已發信通知 SIT 可以進測
 </br>
