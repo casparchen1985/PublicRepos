@@ -10,7 +10,7 @@
 [S_WMDS-622](https://jira.cipherlab.com.tw/browse/S_WMDS-622) &emsp;
 [S_WMDS-625](https://jira.cipherlab.com.tw/browse/S_WMDS-625)
 
-- 目前的處理狀況:
+- 目前的處理狀況:  
 09/12 SIT 進測時有發現 get system property 時沒有保護好造成 crash, 今天會試著複製相同的現象並實驗解法.
 </br>
 </br>
