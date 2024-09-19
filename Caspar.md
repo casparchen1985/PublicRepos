@@ -4,14 +4,14 @@
 | 1   | Meeting, Study and Prepare | 1           | 2024/08/27 | 2024/08/28 | 2024/08/28   |
 | 2   | Fix issue                  | 3           | 2024/08/28 | 2024/08/30 | 2024/09/02   |
 | 3   | Paper Work                 | 0.5         | 2024/09/02 | 2024/09/02 | 2024/09/11   |
-| 4   | Fix bug                    | 1           | 2024/09/13 | 2024/09/16 | -            |
+| 4   | Fix bug                    | 0.5         | 2024/09/13 | 2024/09/13 | 2024/09/13   |
 
 - Links:</br>
 [S_WMDS-622](https://jira.cipherlab.com.tw/browse/S_WMDS-622) &emsp;
 [S_WMDS-625](https://jira.cipherlab.com.tw/browse/S_WMDS-625)
 
 - 目前的處理狀況:  
-09/12 SIT 進測時有發現 get system property 時沒有保護好造成 crash, 今天會試著複製相同的現象並實驗解法.
+09/12 SIT 進測時有發現 get system property 時沒有保護好造成 crash, 已提供新版 apk, 等 SIT 測試結果.
 </br>
 </br>
 
@@ -25,7 +25,7 @@
 | 5   | Build OS Image                  | -           | -          | -          | -            |
 
 - 目前的處理狀況:  
-看完 Source code 跟 JC 討論之後仍須向其他單位確認更多細節. e.g., (1)功能開發時的行為定義 (2) Supprot 窗口與日本客戶的功能認知  
+看完 Source code 跟 JC 討論之後仍須向其他單位確認更多細節.&emsp;e.g., (1) 功能開發時的行為定義  (2) Supprot 窗口與日本客戶的功能認知  
 有確切的功能與行為定義之後, 才有辦法規劃與實作相對應的解法, 甚至是同步各單位的認知並且完成相對應的改善
 </br>
 </br>
@@ -40,7 +40,8 @@
 | 5   | Build OS Image                  | 1           | 2024/09/11 | 2024/09/12 | 2024/09/12   |
 
 - 目前的處理狀況:  
-OS Image (dailybuild) 昨天已請 JC 完成各機種各OS的進版, 今早已發信通知 SIT 可以進測
+09/12 已請 JC 完成 RK25 x3, RK26 x1 的 OS Image 更新,  
+今早確認時卻發現只有 RK26 的 OS Image 有正常的生成, RK25 則須向 BSP 詢問情況後才有辦法自行驗證.
 </br>
 </br>
 
@@ -48,8 +49,8 @@ OS Image (dailybuild) 昨天已請 JC 完成各機種各OS的進版, 今早已�
 | No. | 任務名稱                                                     | 工期 (Days) | 開始時間   | 完成時間   | 實際完成時間 |
 | --- | ----------------------------------------------------------- | ----------- | ---------- | ---------- | ------------ |
 | 1   | 補充 RK25, RS38 刷 OS Image 的注意事項                          | 0.5         | 2024/09/06 | 2024/09/06 | 2024/09/06   |
-| 2   | 轉移 Android Studio 各專案中判斷 DeviceModel 跟 DeviceID 的筆記 | -           | -          | -          | -            |
-| 3   | 補充 IDE Eclipse 環境設定的注意事項                            | 1.5         | 2024/09/09 | 2024/09/10 | 2024/09/10   |
+| 2   | 轉移 Android Studio 各專案中</br>&emsp;判斷 DeviceModel 跟 DeviceID 的筆記 | -           | -          | -          | -            |
+| 3   | 補充 IDE Eclipse 環境設定的注意事項                            | -           | -          | -          | -            |
 | 4   | 新增 Release Note - Key Mapping Manager (RK25)              | 0.5         | 2024/09/11 | 2024/09/12 | 2024/09/12   |
 | 5   | 備份 Release Note - Key Mapping Manager (RS35 / RK95)       | -           | -          | -          | -            |
 
