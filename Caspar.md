@@ -41,7 +41,7 @@
 
 - 目前的處理狀況:  
 09/18 RK25 在 AOS 9, AOS 11 自行驗證 keyboard sound 結果是正常了  
-而 RK26 則需要等 DimenMobile 修正完畢後, 才有可正常開機的 OS Image 用, 屆時自驗完畢再提供給 OS Image 版號給 SIT 進測
+而 RK26 則需要等 DimenMobile 修正完畢後, 才有可正常開機的 OS Image 用, 屆時自驗完畢後再提供 OS Image 版號給 SIT 進測
 </br>
 </br>
 
