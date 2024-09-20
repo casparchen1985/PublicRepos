@@ -5,10 +5,11 @@
 | 2   | Paper Work                 | 0.5         | 2024/09/23 | 2024/09/23 | -            |
 
 - Links:</br>
-[](https://jira.cipherlab.com.tw/browse/)  
+[A_SRFID_310-20](https://jira.cipherlab.com.tw/browse/A_SRFID_310-20)  
 
 - 目前的處理狀況:  
-09/19 下班前確認完需求, 明天開始動工
+昨天下午確認完需求, 今天開始動工
+新增 "None" 選項, 並調整防呆機制, 當 Property value 與 清單項目無相同項目時預設顯示/選取為 "None"
 </br>
 </br>
 
@@ -25,7 +26,7 @@
 [S_WMDS-625](https://jira.cipherlab.com.tw/browse/S_WMDS-625)
 
 - 目前的處理狀況:  
-09/13 SIT Pass, 9/18 寄出 Software Release 信. 將 code push 到 Mercurial.
+09/13 SIT Pass &emsp; 9/18 寄出 Software Release 信. 將 code push 到 Mercurial.
 </br>
 </br>
 
@@ -40,8 +41,8 @@
 | 6   | Verify Issue                    | 0.5         | -          | -          | -            |
 
 - 目前的處理狀況:  
-09/18 RK25 在 AOS 9, AOS 11 自行驗證 keyboard sound 結果是正常了  
-而 RK26 則需要等 DimenMobile 修正完畢後, 才有可正常開機的 OS Image 用, 屆時自驗完畢後再提供 OS Image 版號給 SIT 進測
+09/18 用 RK25 AOS 9, AOS 11 OS Image 自行驗證 keyboard sound 結果為正常  
+而 RK26 則需要等 DimenMobile 修正完畢後, 才有可正常開機的 OS Image 用, 屆時自驗完畢後再提供所有 OS Image 版號給 SIT 一起進測
 </br>
 </br>
 
@@ -50,6 +51,10 @@
 | --- | ----------------------------------------------------------- | ----------- | ---------- | ---------- | ------------ |
 | 1   | 新增 Enterprise Settings Service 頁面 及 Release Note         | 1          | 2024/09/19 | 2024/09/19 | 2024/09/19   |
 | 2   | 增加 幾個主要入口頁的 Shortcut                                  | -           | -          | -          | -            |
+
+- Links:</br>
+[Enterprise Settings Service](http://192.168.8.100:12000/66ebbc0be29b20ef8a0db322) &emsp; [Release Note](http://192.168.8.100:12000/66ebea62e29b20ef8a0dd337)
+[/00_General] &emsp; [/10_Product] &emsp; [/10_Product/10_Android/00_Model] &emsp; [/10_Product/10_Android/10_Software] &emsp; [/80_WeekReport]
 
 - 目前的處理狀況:  
 工作中隨時遇到需要筆記下來的資訊, 就會找時間寫到 GROWI 上
