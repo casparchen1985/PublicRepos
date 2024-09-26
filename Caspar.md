@@ -11,9 +11,9 @@
 [A_SRFID_310-20](https://jira.cipherlab.com.tw/browse/A_SRFID_310-20)  
 
 - 目前的處理狀況:  
-透過 AIDL + Service Binding 方式已經可以使獨立的 UI app (Enterprise Settings) 單純只處理 UHF Module 相關的 UI 邏輯
+透過 AIDL + Service Binding 方式已經可以使獨立的 UI app (Enterprise Settings) 單純只處理 UHF Module 相關的 UI 邏輯  
 而 Service app 統一處理 Get/Set System Property 以及 Initial / Read / Save Settings.JSON 相關操作  
-藉此讓不同層面的操作邏輯彼此獨立, 以提升程式維護的效率.
+藉此讓不同層面的操作邏輯彼此獨立, 以提升程式維護的效率.  
 Source Code 整理完之後會進行 Code Review
 </br>
 </br>
