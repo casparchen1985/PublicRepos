@@ -27,7 +27,7 @@
 | 5   | Build OS Image                  | 1           | -          | -          | -            |
 | 6   | Verify Issue                    | 0.5         | -          | -          | -            |
 
-- 目前的處理狀況:
+- 目前的處理狀況:  
 仍在一個擁有 800 行 source code 的 BroadcastReceiver 中努力, 目前規劃是從中找出 Blue/Orange key 的 flag 來加以利用  
 </br>
 </br>
