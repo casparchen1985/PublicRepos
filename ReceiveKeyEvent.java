@@ -39,16 +39,9 @@
         switch (keyCodeInt) {
             case KeyEvent.KEYCODE_BACK:
                 Log.i(GeneralString.TAG, "KeyEvent.KEYCODE_BACK");
-
                 KeyEvent back_spaceKeyEvent_1 = new KeyEvent(ke.getDownTime(), ke.getEventTime(), ke.getAction(), -1,
                         ke.getRepeatCount(), keyMetaState, ke.getDeviceId(), ke.getScanCode(), keyFlag);
-
-                Intent RTintent = new Intent(GeneralString.Intent_RECEIVE_KEY_EVENT);
-                Bundle bundle = new Bundle();
-                bundle.putInt(GeneralString.KEYCODE_NUMBER, 1);
-                bundle.putParcelable(GeneralString.KEYCODE_DATA, back_spaceKeyEvent_1);
-                RTintent.putExtras(bundle);
-                context.sendBroadcast(RTintent);
+                sendReceiveKeyEventBroadcast(context, back_spaceKeyEvent_1);
                 break;
 
             case KeyEvent.KEYCODE_HOME:
@@ -59,20 +52,9 @@
                     Log.d(GeneralString.TAG, "HOME key is disabled (2)");
                     KeyEvent home_KeyEvent = new KeyEvent(ke.getDownTime(), ke.getEventTime(), ke.getAction(), -1,
                             ke.getRepeatCount(), keyMetaState, ke.getDeviceId(), ke.getScanCode(), keyFlag);
-
-                    Intent RTintent = new Intent(GeneralString.Intent_RECEIVE_KEY_EVENT);
-                    Bundle bundle = new Bundle();
-                    bundle.putInt(GeneralString.KEYCODE_NUMBER, 1);
-                    bundle.putParcelable(GeneralString.KEYCODE_DATA, home_KeyEvent);
-                    RTintent.putExtras(bundle);
-                    context.sendBroadcast(RTintent);
+                    sendReceiveKeyEventBroadcast(context, home_KeyEvent);
                 } else {
-                    Intent RTintent = new Intent(GeneralString.Intent_RECEIVE_KEY_EVENT);
-                    Bundle bundle = new Bundle();
-                    bundle.putInt(GeneralString.KEYCODE_NUMBER, 1);
-                    bundle.putParcelable(GeneralString.KEYCODE_DATA, newKeyEvent);
-                    RTintent.putExtras(bundle);
-                    context.sendBroadcast(RTintent);
+                    sendReceiveKeyEventBroadcast(context, newKeyEvent);
                 }
                 break;
 
@@ -85,13 +67,7 @@
 
                     KeyEvent mKeyEvent = new KeyEvent(ke.getDownTime(), ke.getEventTime(), ke.getAction(), -1,
                             ke.getRepeatCount(), keyMetaState, ke.getDeviceId(), ke.getScanCode(), keyFlag);
-
-                    Intent RTintent = new Intent(GeneralString.Intent_RECEIVE_KEY_EVENT);
-                    Bundle bundle = new Bundle();
-                    bundle.putInt(GeneralString.KEYCODE_NUMBER, 1);
-                    bundle.putParcelable(GeneralString.KEYCODE_DATA, mKeyEvent);
-                    RTintent.putExtras(bundle);
-                    context.sendBroadcast(RTintent);
+                    sendReceiveKeyEventBroadcast(context, mKeyEvent);
 
                     if (repeat == null && ke.getAction() == 0 && ke.getRepeatCount() == 0) {
                         SendInjectInputEvent(context, ke.getAction(), KeyEvent.KEYCODE_DEL, ke.getRepeatCount(),
@@ -107,12 +83,7 @@
                     return;
 
                 } else {
-                    Intent RTintent = new Intent(GeneralString.Intent_RECEIVE_KEY_EVENT);
-                    Bundle bundle = new Bundle();
-                    bundle.putInt(GeneralString.KEYCODE_NUMBER, 1);
-                    bundle.putParcelable(GeneralString.KEYCODE_DATA, newKeyEvent);
-                    RTintent.putExtras(bundle);
-                    context.sendBroadcast(RTintent);
+                    sendReceiveKeyEventBroadcast(context, newKeyEvent);
                 }
                 break;
 
@@ -122,20 +93,10 @@
 
                 if (Integer.parseInt(sGetDataStr) == keyCodeInt) {
                     Log.i(GeneralString.TAG, "sGetDataStr: " + sGetDataStr);
-                    Intent RTintent = new Intent(GeneralString.Intent_RECEIVE_KEY_EVENT);
-                    Bundle bundle = new Bundle();
-                    bundle.putInt(GeneralString.KEYCODE_NUMBER, 1);
-                    bundle.putParcelable(GeneralString.KEYCODE_DATA, null);
-                    RTintent.putExtras(bundle);
-                    context.sendBroadcast(RTintent);
+                    sendReceiveKeyEventBroadcast(context);
                     return;
                 } else {
-                    Intent RTintent = new Intent(GeneralString.Intent_RECEIVE_KEY_EVENT);
-                    Bundle bundle = new Bundle();
-                    bundle.putInt(GeneralString.KEYCODE_NUMBER, 1);
-                    bundle.putParcelable(GeneralString.KEYCODE_DATA, newKeyEvent);
-                    RTintent.putExtras(bundle);
-                    context.sendBroadcast(RTintent);
+                    sendReceiveKeyEventBroadcast(context, newKeyEvent);
                 }
                 break;
 
@@ -150,13 +111,7 @@
 
                     KeyEvent mKeyEvent = new KeyEvent(ke.getDownTime(), ke.getEventTime(), ke.getAction(), -1,
                             ke.getRepeatCount(), keyMetaState, ke.getDeviceId(), ke.getScanCode(), keyFlag);
-
-                    Intent RTintent = new Intent(GeneralString.Intent_RECEIVE_KEY_EVENT);
-                    Bundle bundle = new Bundle();
-                    bundle.putInt(GeneralString.KEYCODE_NUMBER, 1);
-                    bundle.putParcelable(GeneralString.KEYCODE_DATA, mKeyEvent);
-                    RTintent.putExtras(bundle);
-                    context.sendBroadcast(RTintent);
+                    sendReceiveKeyEventBroadcast(context, mKeyEvent);
 
                     if (repeat == null && ke.getAction() == 0 && ke.getRepeatCount() == 0) {
                         SendInjectInputEvent(context, ke.getAction(), Integer.parseInt(keyCode), ke.getRepeatCount(),
@@ -170,14 +125,8 @@
                                 keyMetaState, keyFlag);
                     }
                     return;
-
                 } else {
-                    Intent RTintent = new Intent(GeneralString.Intent_RECEIVE_KEY_EVENT);
-                    Bundle bundle = new Bundle();
-                    bundle.putInt(GeneralString.KEYCODE_NUMBER, 1);
-                    bundle.putParcelable(GeneralString.KEYCODE_DATA, newKeyEvent);
-                    RTintent.putExtras(bundle);
-                    context.sendBroadcast(RTintent);
+                    sendReceiveKeyEventBroadcast(context, newKeyEvent);
                 }
                 break;
 
@@ -195,28 +144,14 @@
                 KeyEvent deleteKeyEvent = new KeyEvent(ke.getDownTime(), ke.getEventTime(), ke.getAction(),
                         KeyEvent.KEYCODE_DEL, ke.getRepeatCount(), ke.getMetaState(), ke.getDeviceId(), ke.getScanCode(),
                         keyFlag);
-
-                Intent RTintent = new Intent(GeneralString.Intent_RECEIVE_KEY_EVENT);
-                Bundle bundle = new Bundle();
-                bundle.putInt(GeneralString.KEYCODE_NUMBER, 2);
-                bundle.putParcelable(GeneralString.KEYCODE_DATA, deleteKeyEvent);
-                bundle.putParcelable(GeneralString.KEYCODE_DATA1, newKeyEvent);
-                RTintent.putExtras(bundle);
-                context.sendBroadcast(RTintent);
+                sendReceiveKeyEventBroadcast(context, 2, deleteKeyEvent, newKeyEvent);
             } else if (HighlightKey) {
                 Log.i(GeneralString.TAG, "It's HighlightKey: " + keyCodeInt);
                 HighlightKey = false;
                 KeyEvent shiftKeyEvent = new KeyEvent(ke.getDownTime(), ke.getEventTime(), ke.getAction(),
                         KeyEvent.KEYCODE_SHIFT_LEFT, ke.getRepeatCount(), ke.getMetaState(), ke.getDeviceId(),
                         ke.getScanCode(), keyFlag);
-
-                Intent RTintent = new Intent(GeneralString.Intent_RECEIVE_KEY_EVENT);
-                Bundle bundle = new Bundle();
-                bundle.putInt(GeneralString.KEYCODE_NUMBER, 2);
-                bundle.putParcelable(GeneralString.KEYCODE_DATA, shiftKeyEvent);
-                bundle.putParcelable(GeneralString.KEYCODE_DATA1, newKeyEvent);
-                RTintent.putExtras(bundle);
-                context.sendBroadcast(RTintent);
+                sendReceiveKeyEventBroadcast(context, 2, shiftKeyEvent, newKeyEvent);
             } else if (keyCodeInt == KeyEvent.KEYCODE_SPACE &&
                     (keyMetaState == KeyEvent.META_CTRL_ON || keyMetaState == (KeyEvent.META_CTRL_ON | KeyEvent.META_SHIFT_ON))) {
                 // Ctrl + Space || Ctrl + Shift + Space
@@ -225,13 +160,7 @@
                 // Android default ctrl+space : Handle keyboard language switching , so set repeat 1
                 KeyEvent ctrl_spaceKeyEvent_1 = new KeyEvent(ke.getDownTime(), ke.getEventTime(), ke.getAction(),
                         Integer.parseInt(keyCode), 1, keyMetaState, ke.getDeviceId(), ke.getScanCode(), keyFlag);
-
-                Intent RTintent = new Intent(GeneralString.Intent_RECEIVE_KEY_EVENT);
-                Bundle bundle = new Bundle();
-                bundle.putInt(GeneralString.KEYCODE_NUMBER, 1);
-                bundle.putParcelable(GeneralString.KEYCODE_DATA, ctrl_spaceKeyEvent_1);
-                RTintent.putExtras(bundle);
-                context.sendBroadcast(RTintent);
+                sendReceiveKeyEventBroadcast(context, ctrl_spaceKeyEvent_1);
             } else {
                 Log.i(GeneralString.TAG, "Other scenario");
 
@@ -272,24 +201,18 @@
                     Log.i(GeneralString.TAG, "KeyEventRDP is ON");
 
                     if (keyMetaState == KeyEvent.META_CTRL_ON) {
-                        Log.i(GeneralString.TAG, "KeyEvent.META_CTRL_ON";
+                        Log.i(GeneralString.TAG, "KeyEvent.META_CTRL_ON");
 
                         KeyEvent skip_KeyEvent = new KeyEvent(ke.getDownTime(), ke.getEventTime(), ke.getAction(), -1,
                                 ke.getRepeatCount(), keyMetaState, ke.getDeviceId(), ke.getScanCode(), keyFlag);
-
-                        Intent RTintent = new Intent(GeneralString.Intent_RECEIVE_KEY_EVENT);
-                        Bundle bundle = new Bundle();
-                        bundle.putInt(GeneralString.KEYCODE_NUMBER, 1);
-                        bundle.putParcelable(GeneralString.KEYCODE_DATA, skip_KeyEvent);
-                        RTintent.putExtras(bundle);
-                        context.sendBroadcast(RTintent);
+                        sendReceiveKeyEventBroadcast(context, skip_KeyEvent);
 
                         if (ke.getAction() == KeyEvent.ACTION_DOWN) {
                             int win_scancode = WindowsScancode.GetScanCode(keyCodeInt);
                             Log.i(GeneralString.TAG, "WindowsScancode: " + win_scancode);
 
                             SendInjectInputEvent(context, KeyEvent.ACTION_DOWN, KeyEvent.KEYCODE_CTRL_LEFT, 0, 0, FLAG_CIPHERLAB);
-                            SendInjectInputEvent_scancode(context, KeyEvent.ACTION_DOWN, keyCodeInt, ke.getRepeatCount(), KeyEvent.META_CTRL_ON | KeyEvent.META_CTRL_LEFT_ON, win_scancode, );
+                            SendInjectInputEvent_scancode(context, KeyEvent.ACTION_DOWN, keyCodeInt, ke.getRepeatCount(), KeyEvent.META_CTRL_ON | KeyEvent.META_CTRL_LEFT_ON, win_scancode, FLAG_CIPHERLAB);
                             SendInjectInputEvent_scancode(context, KeyEvent.ACTION_UP, keyCodeInt, ke.getRepeatCount(), KeyEvent.META_CTRL_ON | KeyEvent.META_CTRL_LEFT_ON, win_scancode, FLAG_CIPHERLAB);
                             SendInjectInputEvent(context, KeyEvent.ACTION_UP, KeyEvent.KEYCODE_CTRL_LEFT, 0, 0, FLAG_CIPHERLAB);
                         }
@@ -298,13 +221,7 @@
 
                         KeyEvent skip_KeyEvent = new KeyEvent(ke.getDownTime(), ke.getEventTime(), ke.getAction(), -1,
                                 ke.getRepeatCount(), keyMetaState, ke.getDeviceId(), ke.getScanCode(), keyFlag);
-
-                        Intent RTintent = new Intent(GeneralString.Intent_RECEIVE_KEY_EVENT);
-                        Bundle bundle = new Bundle();
-                        bundle.putInt(GeneralString.KEYCODE_NUMBER, 1);
-                        bundle.putParcelable(GeneralString.KEYCODE_DATA, skip_KeyEvent);
-                        RTintent.putExtras(bundle);
-                        context.sendBroadcast(RTintent);
+                        sendReceiveKeyEventBroadcast(context, skip_KeyEvent);
 
                         if (ke.getAction() == KeyEvent.ACTION_DOWN) {
                             int win_scancode = WindowsScancode.GetScanCode(Integer.parseInt(keyCode));
@@ -320,13 +237,7 @@
 
                         KeyEvent skip_KeyEvent = new KeyEvent(ke.getDownTime(), ke.getEventTime(), ke.getAction(), -1,
                                 ke.getRepeatCount(), keyMetaState, ke.getDeviceId(), ke.getScanCode(), keyFlag);
-
-                        Intent RTintent = new Intent(GeneralString.Intent_RECEIVE_KEY_EVENT);
-                        Bundle bundle = new Bundle();
-                        bundle.putInt(GeneralString.KEYCODE_NUMBER, 1);
-                        bundle.putParcelable(GeneralString.KEYCODE_DATA, skip_KeyEvent);
-                        RTintent.putExtras(bundle);
-                        context.sendBroadcast(RTintent);
+                        sendReceiveKeyEventBroadcast(context, skip_KeyEvent);
 
                         if (ke.getAction() == KeyEvent.ACTION_DOWN) {
                             int win_scancode = WindowsScancode.GetScanCode(Integer.parseInt(keyCode));
@@ -339,12 +250,7 @@
                         }
                     } else {
                         Log.i(GeneralString.TAG, "Other scenario");
-                        Intent RTintent = new Intent(GeneralString.Intent_RECEIVE_KEY_EVENT);
-                        Bundle bundle = new Bundle();
-                        bundle.putInt(GeneralString.KEYCODE_NUMBER, 1);
-                        bundle.putParcelable(GeneralString.KEYCODE_DATA, newKeyEvent);
-                        RTintent.putExtras(bundle);
-                        context.sendBroadcast(RTintent);
+                        sendReceiveKeyEventBroadcast(context, newKeyEvent);
                     }
 
                 } else if (ke.getKeyCode() == 545 || ke.getKeyCode() == 548) {
@@ -352,13 +258,7 @@
 
                     KeyEvent mKeyEvent = new KeyEvent(ke.getDownTime(), ke.getEventTime(), ke.getAction(), -1,
                             ke.getRepeatCount(), keyMetaState, ke.getDeviceId(), ke.getScanCode(), keyFlag);
-
-                    Intent RTintent = new Intent(GeneralString.Intent_RECEIVE_KEY_EVENT);
-                    Bundle bundle = new Bundle();
-                    bundle.putInt(GeneralString.KEYCODE_NUMBER, 1);
-                    bundle.putParcelable(GeneralString.KEYCODE_DATA, mKeyEvent);
-                    RTintent.putExtras(bundle);
-                    context.sendBroadcast(RTintent);
+                    sendReceiveKeyEventBroadcast(context, mKeyEvent);
 
                     if (repeat == null && ke.getAction() == 0 && ke.getRepeatCount() == 0) {
                         SendInjectInputEvent(context, ke.getAction(), keyCodeInt, ke.getRepeatCount(), keyMetaState, keyFlag);
@@ -382,13 +282,7 @@
                         repeat = null;
                         SendInjectInputEvent(context, ke.getAction(), Integer.parseInt(keyCode), ke.getRepeatCount(), keyMetaState, keyFlag);
                     }
-                    
-                    Intent RTintent = new Intent(GeneralString.Intent_RECEIVE_KEY_EVENT);
-                    Bundle bundle = new Bundle();
-                    bundle.putInt(GeneralString.KEYCODE_NUMBER, 1);
-                    bundle.putParcelable(GeneralString.KEYCODE_DATA, newKeyEvent);
-                    RTintent.putExtras(bundle);
-                    context.sendBroadcast(RTintent);
+                    sendReceiveKeyEventBroadcast(context, newKeyEvent);
                 }
             }
         }
@@ -397,4 +291,41 @@
                 "ReceiveKeyEvent >>> Action = " + ke.getAction() + " , RepeatCount = " + ke.getRepeatCount()
                         + " , metaState = " + keyMetaState + " , FLAG = " + keyFlag + " , ScanCode = "
                         + ke.getScanCode());
+    }
+
+
+
+
+
+
+
+    /**
+     * @param context Service context
+     */
+    private static void sendReceiveKeyEventBroadcast(Context context) {
+        sendReceiveKeyEventBroadcast(context, 1, null, null);
+    }
+
+    /**
+     * @param context      Service context
+     * @param dataKeyEvent KeyEvent
+     */
+    private static void sendReceiveKeyEventBroadcast(Context context, @NonNull KeyEvent dataKeyEvent) {
+        sendReceiveKeyEventBroadcast(context, 1, dataKeyEvent, null);
+    }
+
+    /**
+     * @param context       Service context
+     * @param eventQuantity How many Parcelable data you want to send out.
+     * @param dataKeyEvent  if you have multiple KeyEvents, put modifier KeyEvent (like deleteKeyEvent or shiftKeyEvent) here first.
+     * @param data1KeyEvent if you only have 1 KeyEvent, just put null here.
+     */
+    private static void sendReceiveKeyEventBroadcast(Context context, @NonNull Integer eventQuantity, KeyEvent dataKeyEvent, KeyEvent data1KeyEvent) {
+        Intent RTintent = new Intent(GeneralString.Intent_RECEIVE_KEY_EVENT);
+        Bundle bundle = new Bundle();
+        bundle.putInt(GeneralString.KEYCODE_NUMBER, eventQuantity);
+        bundle.putParcelable(GeneralString.KEYCODE_DATA, dataKeyEvent);
+        if (data1KeyEvent != null) bundle.putParcelable(GeneralString.KEYCODE_DATA1, data1KeyEvent);
+        RTintent.putExtras(bundle);
+        context.sendBroadcast(RTintent);
     }
