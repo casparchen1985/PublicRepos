@@ -31,7 +31,8 @@
 [A_SRFID_310-24](https://jira.cipherlab.com.tw/browse/A_SRFID_310-24)  
 
 - 目前的處理狀況:  
-09/30 Code Review 完成, Build Signed APK, 送測申請單填寫完成, 目前等 UHF RFID Service / EZConfig 等相關搭配軟體完工後 build 出 OS Image 再送測
+09/30 Code Review 完成, Build Signed APK, 送測申請單填寫完成,  
+目前等 UHF RFID Service / EZConfig 等其他相關搭配的軟體完工後 build OS Image 再送測
 </br>
 </br>
 
