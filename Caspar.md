@@ -49,6 +49,6 @@
 - 目前的處理狀況:  
 在 KeyMappingManager 上修正與 Disable Special KeyEvent 啓閉狀態有相關的邏輯,  
 把 Alpha Mode / Fn Mode 及後續組合鍵的行為攔截下來, 並在攔截後取消 Alpha/Fn/Shift 狀態, 使鍵盤恢復到一般數字鍵盤模式  
-本次修正行為已與 Hank (SW PM) 同步完, 接下來會再跟 Kale (Support) 同步資訊, 最後再包進 OS Image 送測
+本次修正行為會請家全與 SW PM 及 Support 同步資訊, 若沒其他疑慮的話, 最後再 build OS Image 送測
 </br>
 </br>
