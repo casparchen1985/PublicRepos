@@ -30,7 +30,7 @@
 [A_SRFID_310-20](https://jira.cipherlab.com.tw/browse/A_SRFID_310-20)  
 [A_SRFID_310-24](https://jira.cipherlab.com.tw/browse/A_SRFID_310-24)  
 
-- 目前的處理狀況:  
+- 目前的處理狀況:
 09/30 Code Review 完成, Build Signed APK, 送測申請單填寫完成,  
 目前等 UHF RFID Service / EZConfig 等其他相關搭配的軟體完工後 build OS Image 再送測
 </br>
@@ -46,9 +46,9 @@
 | 5   | Build OS Image                  | 1           | -          | -          | -            |
 | 6   | Verify Issue                    | 0.5         | -          | -          | -            |
 
-- 目前的處理狀況:
-在 KeyMappingManager 上修正與 Disable Special KeyEvent 啓閉狀態有相關的邏輯,
-把 Alpha Mode / Fn Mode 及後續組合鍵的行為攔截下來, 並在攔截後取消 Alpha/Fn/Shift 狀態, 使鍵盤恢復到一般數字鍵盤模式
+- 目前的處理狀況:  
+在 KeyMappingManager 上修正與 Disable Special KeyEvent 啓閉狀態有相關的邏輯,  
+把 Alpha Mode / Fn Mode 及後續組合鍵的行為攔截下來, 並在攔截後取消 Alpha/Fn/Shift 狀態, 使鍵盤恢復到一般數字鍵盤模式  
 本次修正行為已與 Hank (SW PM) 同步完, 接下來會再跟 Kale (Support) 同步資訊, 最後再包進 OS Image 送測
 </br>
 </br>
